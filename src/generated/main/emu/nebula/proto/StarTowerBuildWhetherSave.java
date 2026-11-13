@@ -36,6 +36,11 @@ public final class StarTowerBuildWhetherSave {
     private boolean preference;
 
     /**
+     * <code>optional bool Discard = 5;</code>
+     */
+    private boolean discard;
+
+    /**
      * <code>optional bytes NextPackage = 2047;</code>
      */
     private final RepeatedByte nextPackage = RepeatedByte.newEmptyInstance();
@@ -167,11 +172,48 @@ public final class StarTowerBuildWhetherSave {
     }
 
     /**
+     * <code>optional bool Discard = 5;</code>
+     * @return whether the discard field is set
+     */
+    public boolean hasDiscard() {
+      return (bitField0_ & 0x00000008) != 0;
+    }
+
+    /**
+     * <code>optional bool Discard = 5;</code>
+     * @return this
+     */
+    public StarTowerBuildWhetherSaveReq clearDiscard() {
+      bitField0_ &= ~0x00000008;
+      discard = false;
+      return this;
+    }
+
+    /**
+     * <code>optional bool Discard = 5;</code>
+     * @return the discard
+     */
+    public boolean getDiscard() {
+      return discard;
+    }
+
+    /**
+     * <code>optional bool Discard = 5;</code>
+     * @param value the discard to set
+     * @return this
+     */
+    public StarTowerBuildWhetherSaveReq setDiscard(final boolean value) {
+      bitField0_ |= 0x00000008;
+      discard = value;
+      return this;
+    }
+
+    /**
      * <code>optional bytes NextPackage = 2047;</code>
      * @return whether the nextPackage field is set
      */
     public boolean hasNextPackage() {
-      return (bitField0_ & 0x00000008) != 0;
+      return (bitField0_ & 0x00000010) != 0;
     }
 
     /**
@@ -179,7 +221,7 @@ public final class StarTowerBuildWhetherSave {
      * @return this
      */
     public StarTowerBuildWhetherSaveReq clearNextPackage() {
-      bitField0_ &= ~0x00000008;
+      bitField0_ &= ~0x00000010;
       nextPackage.clear();
       return this;
     }
@@ -208,7 +250,7 @@ public final class StarTowerBuildWhetherSave {
      * @return internal storage object for modifications
      */
     public RepeatedByte getMutableNextPackage() {
-      bitField0_ |= 0x00000008;
+      bitField0_ |= 0x00000010;
       return nextPackage;
     }
 
@@ -218,7 +260,7 @@ public final class StarTowerBuildWhetherSave {
      * @return this
      */
     public StarTowerBuildWhetherSaveReq addNextPackage(final byte value) {
-      bitField0_ |= 0x00000008;
+      bitField0_ |= 0x00000010;
       nextPackage.add(value);
       return this;
     }
@@ -229,7 +271,7 @@ public final class StarTowerBuildWhetherSave {
      * @return this
      */
     public StarTowerBuildWhetherSaveReq addAllNextPackage(final byte... values) {
-      bitField0_ |= 0x00000008;
+      bitField0_ |= 0x00000010;
       nextPackage.addAll(values);
       return this;
     }
@@ -240,7 +282,7 @@ public final class StarTowerBuildWhetherSave {
      * @return this
      */
     public StarTowerBuildWhetherSaveReq setNextPackage(final byte... values) {
-      bitField0_ |= 0x00000008;
+      bitField0_ |= 0x00000010;
       nextPackage.copyFrom(values);
       return this;
     }
@@ -250,7 +292,7 @@ public final class StarTowerBuildWhetherSave {
      * @return whether the buildName field is set
      */
     public boolean hasBuildName() {
-      return (bitField0_ & 0x00000010) != 0;
+      return (bitField0_ & 0x00000020) != 0;
     }
 
     /**
@@ -258,7 +300,7 @@ public final class StarTowerBuildWhetherSave {
      * @return this
      */
     public StarTowerBuildWhetherSaveReq clearBuildName() {
-      bitField0_ &= ~0x00000010;
+      bitField0_ &= ~0x00000020;
       buildName.clear();
       return this;
     }
@@ -284,7 +326,7 @@ public final class StarTowerBuildWhetherSave {
      * @return internal {@code Utf8String} representation of buildName for modifications
      */
     public Utf8String getMutableBuildNameBytes() {
-      bitField0_ |= 0x00000010;
+      bitField0_ |= 0x00000020;
       return this.buildName;
     }
 
@@ -294,7 +336,7 @@ public final class StarTowerBuildWhetherSave {
      * @return this
      */
     public StarTowerBuildWhetherSaveReq setBuildName(final CharSequence value) {
-      bitField0_ |= 0x00000010;
+      bitField0_ |= 0x00000020;
       buildName.copyFrom(value);
       return this;
     }
@@ -305,7 +347,7 @@ public final class StarTowerBuildWhetherSave {
      * @return this
      */
     public StarTowerBuildWhetherSaveReq setBuildName(final Utf8String value) {
-      bitField0_ |= 0x00000010;
+      bitField0_ |= 0x00000020;
       buildName.copyFrom(value);
       return this;
     }
@@ -318,6 +360,7 @@ public final class StarTowerBuildWhetherSave {
         delete = other.delete;
         lock = other.lock;
         preference = other.preference;
+        discard = other.discard;
         nextPackage.copyFrom(other.nextPackage);
         buildName.copyFrom(other.buildName);
       }
@@ -339,6 +382,9 @@ public final class StarTowerBuildWhetherSave {
       if (other.hasPreference()) {
         setPreference(other.preference);
       }
+      if (other.hasDiscard()) {
+        setDiscard(other.discard);
+      }
       if (other.hasNextPackage()) {
         getMutableNextPackage().copyFrom(other.nextPackage);
       }
@@ -358,6 +404,7 @@ public final class StarTowerBuildWhetherSave {
       delete = false;
       lock = false;
       preference = false;
+      discard = false;
       nextPackage.clear();
       buildName.clear();
       return this;
@@ -388,6 +435,7 @@ public final class StarTowerBuildWhetherSave {
         && (!hasDelete() || delete == other.delete)
         && (!hasLock() || lock == other.lock)
         && (!hasPreference() || preference == other.preference)
+        && (!hasDiscard() || discard == other.discard)
         && (!hasNextPackage() || nextPackage.equals(other.nextPackage))
         && (!hasBuildName() || buildName.equals(other.buildName));
     }
@@ -407,10 +455,14 @@ public final class StarTowerBuildWhetherSave {
         output.writeBoolNoTag(preference);
       }
       if ((bitField0_ & 0x00000008) != 0) {
+        output.writeRawByte((byte) 40);
+        output.writeBoolNoTag(discard);
+      }
+      if ((bitField0_ & 0x00000010) != 0) {
         output.writeRawLittleEndian16((short) 32762);
         output.writeBytesNoTag(nextPackage);
       }
-      if ((bitField0_ & 0x00000010) != 0) {
+      if ((bitField0_ & 0x00000020) != 0) {
         output.writeRawByte((byte) 34);
         output.writeStringNoTag(buildName);
       }
@@ -429,9 +481,12 @@ public final class StarTowerBuildWhetherSave {
         size += 2;
       }
       if ((bitField0_ & 0x00000008) != 0) {
-        size += 2 + ProtoSink.computeBytesSizeNoTag(nextPackage);
+        size += 2;
       }
       if ((bitField0_ & 0x00000010) != 0) {
+        size += 2 + ProtoSink.computeBytesSizeNoTag(nextPackage);
+      }
+      if ((bitField0_ & 0x00000020) != 0) {
         size += 1 + ProtoSink.computeStringSizeNoTag(buildName);
       }
       return size;
@@ -467,6 +522,15 @@ public final class StarTowerBuildWhetherSave {
             preference = input.readBool();
             bitField0_ |= 0x00000004;
             tag = input.readTag();
+            if (tag != 40) {
+              break;
+            }
+          }
+          case 40: {
+            // discard
+            discard = input.readBool();
+            bitField0_ |= 0x00000008;
+            tag = input.readTag();
             if (tag != 16378) {
               break;
             }
@@ -474,7 +538,7 @@ public final class StarTowerBuildWhetherSave {
           case 16378: {
             // nextPackage
             input.readBytes(nextPackage);
-            bitField0_ |= 0x00000008;
+            bitField0_ |= 0x00000010;
             tag = input.readTag();
             if (tag != 34) {
               break;
@@ -483,7 +547,7 @@ public final class StarTowerBuildWhetherSave {
           case 34: {
             // buildName
             input.readString(buildName);
-            bitField0_ |= 0x00000010;
+            bitField0_ |= 0x00000020;
             tag = input.readTag();
             if (tag != 0) {
               break;
@@ -516,9 +580,12 @@ public final class StarTowerBuildWhetherSave {
         output.writeBool(FieldNames.preference, preference);
       }
       if ((bitField0_ & 0x00000008) != 0) {
-        output.writeBytes(FieldNames.nextPackage, nextPackage);
+        output.writeBool(FieldNames.discard, discard);
       }
       if ((bitField0_ & 0x00000010) != 0) {
+        output.writeBytes(FieldNames.nextPackage, nextPackage);
+      }
+      if ((bitField0_ & 0x00000020) != 0) {
         output.writeString(FieldNames.buildName, buildName);
       }
       output.endObject();
@@ -564,11 +631,22 @@ public final class StarTowerBuildWhetherSave {
             }
             break;
           }
+          case -958947202: {
+            if (input.isAtField(FieldNames.discard)) {
+              if (!input.trySkipNullValue()) {
+                discard = input.readBool();
+                bitField0_ |= 0x00000008;
+              }
+            } else {
+              input.skipUnknownField();
+            }
+            break;
+          }
           case -2082324045: {
             if (input.isAtField(FieldNames.nextPackage)) {
               if (!input.trySkipNullValue()) {
                 input.readBytes(nextPackage);
-                bitField0_ |= 0x00000008;
+                bitField0_ |= 0x00000010;
               }
             } else {
               input.skipUnknownField();
@@ -579,7 +657,7 @@ public final class StarTowerBuildWhetherSave {
             if (input.isAtField(FieldNames.buildName)) {
               if (!input.trySkipNullValue()) {
                 input.readString(buildName);
-                bitField0_ |= 0x00000010;
+                bitField0_ |= 0x00000020;
               }
             } else {
               input.skipUnknownField();
@@ -646,6 +724,8 @@ public final class StarTowerBuildWhetherSave {
       static final FieldName lock = FieldName.forField("Lock");
 
       static final FieldName preference = FieldName.forField("Preference");
+
+      static final FieldName discard = FieldName.forField("Discard");
 
       static final FieldName nextPackage = FieldName.forField("NextPackage");
 

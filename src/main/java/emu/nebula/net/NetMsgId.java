@@ -434,6 +434,12 @@ public class NetMsgId {
     public static final int star_tower_build_note_modify_req = 4758;
     public static final int star_tower_build_note_modify_succeed_ack = 4759;
     public static final int star_tower_build_note_modify_failed_ack = 4760;
+    public static final int star_tower_build_generator_req = 4761;
+    public static final int star_tower_build_generator_succeed_ack = 4762;
+    public static final int star_tower_build_generator_failed_ack = 4763;
+    public static final int star_tower_build_discard_req = 4764;
+    public static final int star_tower_build_discard_succeed_ack = 4765;
+    public static final int star_tower_build_discard_failed_ack = 4766;
     public static final int build_convert_detail_list_get_req = 4801;
     public static final int build_convert_detail_list_get_succeed_ack = 4802;
     public static final int build_convert_detail_list_get_failed_ack = 4803;
@@ -1026,6 +1032,9 @@ public class NetMsgId {
     public static final int dorm_learn_req = 9571;
     public static final int dorm_learn_succeed_ack = 9572;
     public static final int dorm_learn_failed_ack = 9573;
+    public static final int dorm_get_furniture_num_req = 9574;
+    public static final int dorm_get_furniture_num_succeed_ack = 9575;
+    public static final int dorm_get_furniture_num_failed_ack = 9576;
     public static final int activity_levels_apply_req = 9601;
     public static final int activity_levels_apply_succeed_ack = 9602;
     public static final int activity_levels_apply_failed_ack = 9603;

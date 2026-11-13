@@ -10807,6 +10807,11 @@ public final class PublicStarTower {
     private int nPCId;
 
     /**
+     * <code>optional uint32 EventOptionCnt = 7;</code>
+     */
+    private int eventOptionCnt;
+
+    /**
      * <code>optional bool Done = 5;</code>
      */
     private boolean done;
@@ -10916,11 +10921,48 @@ public final class PublicStarTower {
     }
 
     /**
+     * <code>optional uint32 EventOptionCnt = 7;</code>
+     * @return whether the eventOptionCnt field is set
+     */
+    public boolean hasEventOptionCnt() {
+      return (bitField0_ & 0x00000004) != 0;
+    }
+
+    /**
+     * <code>optional uint32 EventOptionCnt = 7;</code>
+     * @return this
+     */
+    public SelectOptionsEventCaseData clearEventOptionCnt() {
+      bitField0_ &= ~0x00000004;
+      eventOptionCnt = 0;
+      return this;
+    }
+
+    /**
+     * <code>optional uint32 EventOptionCnt = 7;</code>
+     * @return the eventOptionCnt
+     */
+    public int getEventOptionCnt() {
+      return eventOptionCnt;
+    }
+
+    /**
+     * <code>optional uint32 EventOptionCnt = 7;</code>
+     * @param value the eventOptionCnt to set
+     * @return this
+     */
+    public SelectOptionsEventCaseData setEventOptionCnt(final int value) {
+      bitField0_ |= 0x00000004;
+      eventOptionCnt = value;
+      return this;
+    }
+
+    /**
      * <code>optional bool Done = 5;</code>
      * @return whether the done field is set
      */
     public boolean hasDone() {
-      return (bitField0_ & 0x00000004) != 0;
+      return (bitField0_ & 0x00000008) != 0;
     }
 
     /**
@@ -10928,7 +10970,7 @@ public final class PublicStarTower {
      * @return this
      */
     public SelectOptionsEventCaseData clearDone() {
-      bitField0_ &= ~0x00000004;
+      bitField0_ &= ~0x00000008;
       done = false;
       return this;
     }
@@ -10947,7 +10989,7 @@ public final class PublicStarTower {
      * @return this
      */
     public SelectOptionsEventCaseData setDone(final boolean value) {
-      bitField0_ |= 0x00000004;
+      bitField0_ |= 0x00000008;
       done = value;
       return this;
     }
@@ -10957,7 +10999,7 @@ public final class PublicStarTower {
      * @return whether the nextPackage field is set
      */
     public boolean hasNextPackage() {
-      return (bitField0_ & 0x00000008) != 0;
+      return (bitField0_ & 0x00000010) != 0;
     }
 
     /**
@@ -10965,7 +11007,7 @@ public final class PublicStarTower {
      * @return this
      */
     public SelectOptionsEventCaseData clearNextPackage() {
-      bitField0_ &= ~0x00000008;
+      bitField0_ &= ~0x00000010;
       nextPackage.clear();
       return this;
     }
@@ -10994,7 +11036,7 @@ public final class PublicStarTower {
      * @return internal storage object for modifications
      */
     public RepeatedByte getMutableNextPackage() {
-      bitField0_ |= 0x00000008;
+      bitField0_ |= 0x00000010;
       return nextPackage;
     }
 
@@ -11004,7 +11046,7 @@ public final class PublicStarTower {
      * @return this
      */
     public SelectOptionsEventCaseData addNextPackage(final byte value) {
-      bitField0_ |= 0x00000008;
+      bitField0_ |= 0x00000010;
       nextPackage.add(value);
       return this;
     }
@@ -11015,7 +11057,7 @@ public final class PublicStarTower {
      * @return this
      */
     public SelectOptionsEventCaseData addAllNextPackage(final byte... values) {
-      bitField0_ |= 0x00000008;
+      bitField0_ |= 0x00000010;
       nextPackage.addAll(values);
       return this;
     }
@@ -11026,7 +11068,7 @@ public final class PublicStarTower {
      * @return this
      */
     public SelectOptionsEventCaseData setNextPackage(final byte... values) {
-      bitField0_ |= 0x00000008;
+      bitField0_ |= 0x00000010;
       nextPackage.copyFrom(values);
       return this;
     }
@@ -11036,7 +11078,7 @@ public final class PublicStarTower {
      * @return whether the options field is set
      */
     public boolean hasOptions() {
-      return (bitField0_ & 0x00000010) != 0;
+      return (bitField0_ & 0x00000020) != 0;
     }
 
     /**
@@ -11044,7 +11086,7 @@ public final class PublicStarTower {
      * @return this
      */
     public SelectOptionsEventCaseData clearOptions() {
-      bitField0_ &= ~0x00000010;
+      bitField0_ &= ~0x00000020;
       options.clear();
       return this;
     }
@@ -11073,7 +11115,7 @@ public final class PublicStarTower {
      * @return internal storage object for modifications
      */
     public RepeatedInt getMutableOptions() {
-      bitField0_ |= 0x00000010;
+      bitField0_ |= 0x00000020;
       return options;
     }
 
@@ -11083,7 +11125,7 @@ public final class PublicStarTower {
      * @return this
      */
     public SelectOptionsEventCaseData addOptions(final int value) {
-      bitField0_ |= 0x00000010;
+      bitField0_ |= 0x00000020;
       options.add(value);
       return this;
     }
@@ -11094,7 +11136,7 @@ public final class PublicStarTower {
      * @return this
      */
     public SelectOptionsEventCaseData addAllOptions(final int... values) {
-      bitField0_ |= 0x00000010;
+      bitField0_ |= 0x00000020;
       options.addAll(values);
       return this;
     }
@@ -11104,7 +11146,7 @@ public final class PublicStarTower {
      * @return whether the failedIdxes field is set
      */
     public boolean hasFailedIdxes() {
-      return (bitField0_ & 0x00000020) != 0;
+      return (bitField0_ & 0x00000040) != 0;
     }
 
     /**
@@ -11112,7 +11154,7 @@ public final class PublicStarTower {
      * @return this
      */
     public SelectOptionsEventCaseData clearFailedIdxes() {
-      bitField0_ &= ~0x00000020;
+      bitField0_ &= ~0x00000040;
       failedIdxes.clear();
       return this;
     }
@@ -11141,7 +11183,7 @@ public final class PublicStarTower {
      * @return internal storage object for modifications
      */
     public RepeatedInt getMutableFailedIdxes() {
-      bitField0_ |= 0x00000020;
+      bitField0_ |= 0x00000040;
       return failedIdxes;
     }
 
@@ -11151,7 +11193,7 @@ public final class PublicStarTower {
      * @return this
      */
     public SelectOptionsEventCaseData addFailedIdxes(final int value) {
-      bitField0_ |= 0x00000020;
+      bitField0_ |= 0x00000040;
       failedIdxes.add(value);
       return this;
     }
@@ -11162,7 +11204,7 @@ public final class PublicStarTower {
      * @return this
      */
     public SelectOptionsEventCaseData addAllFailedIdxes(final int... values) {
-      bitField0_ |= 0x00000020;
+      bitField0_ |= 0x00000040;
       failedIdxes.addAll(values);
       return this;
     }
@@ -11172,7 +11214,7 @@ public final class PublicStarTower {
      * @return whether the infos field is set
      */
     public boolean hasInfos() {
-      return (bitField0_ & 0x00000040) != 0;
+      return (bitField0_ & 0x00000080) != 0;
     }
 
     /**
@@ -11180,7 +11222,7 @@ public final class PublicStarTower {
      * @return this
      */
     public SelectOptionsEventCaseData clearInfos() {
-      bitField0_ &= ~0x00000040;
+      bitField0_ &= ~0x00000080;
       infos.clear();
       return this;
     }
@@ -11209,7 +11251,7 @@ public final class PublicStarTower {
      * @return internal storage object for modifications
      */
     public RepeatedMessage<NPCAffinityInfo> getMutableInfos() {
-      bitField0_ |= 0x00000040;
+      bitField0_ |= 0x00000080;
       return infos;
     }
 
@@ -11219,7 +11261,7 @@ public final class PublicStarTower {
      * @return this
      */
     public SelectOptionsEventCaseData addInfos(final NPCAffinityInfo value) {
-      bitField0_ |= 0x00000040;
+      bitField0_ |= 0x00000080;
       infos.add(value);
       return this;
     }
@@ -11230,7 +11272,7 @@ public final class PublicStarTower {
      * @return this
      */
     public SelectOptionsEventCaseData addAllInfos(final NPCAffinityInfo... values) {
-      bitField0_ |= 0x00000040;
+      bitField0_ |= 0x00000080;
       infos.addAll(values);
       return this;
     }
@@ -11242,6 +11284,7 @@ public final class PublicStarTower {
         bitField0_ = other.bitField0_;
         evtId = other.evtId;
         nPCId = other.nPCId;
+        eventOptionCnt = other.eventOptionCnt;
         done = other.done;
         nextPackage.copyFrom(other.nextPackage);
         options.copyFrom(other.options);
@@ -11262,6 +11305,9 @@ public final class PublicStarTower {
       }
       if (other.hasNPCId()) {
         setNPCId(other.nPCId);
+      }
+      if (other.hasEventOptionCnt()) {
+        setEventOptionCnt(other.eventOptionCnt);
       }
       if (other.hasDone()) {
         setDone(other.done);
@@ -11290,6 +11336,7 @@ public final class PublicStarTower {
       bitField0_ = 0;
       evtId = 0;
       nPCId = 0;
+      eventOptionCnt = 0;
       done = false;
       nextPackage.clear();
       options.clear();
@@ -11324,6 +11371,7 @@ public final class PublicStarTower {
       return bitField0_ == other.bitField0_
         && (!hasEvtId() || evtId == other.evtId)
         && (!hasNPCId() || nPCId == other.nPCId)
+        && (!hasEventOptionCnt() || eventOptionCnt == other.eventOptionCnt)
         && (!hasDone() || done == other.done)
         && (!hasNextPackage() || nextPackage.equals(other.nextPackage))
         && (!hasOptions() || options.equals(other.options))
@@ -11342,26 +11390,30 @@ public final class PublicStarTower {
         output.writeUInt32NoTag(nPCId);
       }
       if ((bitField0_ & 0x00000004) != 0) {
+        output.writeRawByte((byte) 56);
+        output.writeUInt32NoTag(eventOptionCnt);
+      }
+      if ((bitField0_ & 0x00000008) != 0) {
         output.writeRawByte((byte) 40);
         output.writeBoolNoTag(done);
       }
-      if ((bitField0_ & 0x00000008) != 0) {
+      if ((bitField0_ & 0x00000010) != 0) {
         output.writeRawLittleEndian16((short) 32762);
         output.writeBytesNoTag(nextPackage);
       }
-      if ((bitField0_ & 0x00000010) != 0) {
+      if ((bitField0_ & 0x00000020) != 0) {
         for (int i = 0; i < options.length(); i++) {
           output.writeRawByte((byte) 16);
           output.writeUInt32NoTag(options.array()[i]);
         }
       }
-      if ((bitField0_ & 0x00000020) != 0) {
+      if ((bitField0_ & 0x00000040) != 0) {
         for (int i = 0; i < failedIdxes.length(); i++) {
           output.writeRawByte((byte) 24);
           output.writeUInt32NoTag(failedIdxes.array()[i]);
         }
       }
-      if ((bitField0_ & 0x00000040) != 0) {
+      if ((bitField0_ & 0x00000080) != 0) {
         for (int i = 0; i < infos.length(); i++) {
           output.writeRawByte((byte) 50);
           output.writeMessageNoTag(infos.get(i));
@@ -11379,18 +11431,21 @@ public final class PublicStarTower {
         size += 1 + ProtoSink.computeUInt32SizeNoTag(nPCId);
       }
       if ((bitField0_ & 0x00000004) != 0) {
-        size += 2;
+        size += 1 + ProtoSink.computeUInt32SizeNoTag(eventOptionCnt);
       }
       if ((bitField0_ & 0x00000008) != 0) {
-        size += 2 + ProtoSink.computeBytesSizeNoTag(nextPackage);
+        size += 2;
       }
       if ((bitField0_ & 0x00000010) != 0) {
-        size += (1 * options.length()) + ProtoSink.computeRepeatedUInt32SizeNoTag(options);
+        size += 2 + ProtoSink.computeBytesSizeNoTag(nextPackage);
       }
       if ((bitField0_ & 0x00000020) != 0) {
-        size += (1 * failedIdxes.length()) + ProtoSink.computeRepeatedUInt32SizeNoTag(failedIdxes);
+        size += (1 * options.length()) + ProtoSink.computeRepeatedUInt32SizeNoTag(options);
       }
       if ((bitField0_ & 0x00000040) != 0) {
+        size += (1 * failedIdxes.length()) + ProtoSink.computeRepeatedUInt32SizeNoTag(failedIdxes);
+      }
+      if ((bitField0_ & 0x00000080) != 0) {
         size += (1 * infos.length()) + ProtoSink.computeRepeatedMessageSizeNoTag(infos);
       }
       return size;
@@ -11417,6 +11472,15 @@ public final class PublicStarTower {
             nPCId = input.readUInt32();
             bitField0_ |= 0x00000002;
             tag = input.readTag();
+            if (tag != 56) {
+              break;
+            }
+          }
+          case 56: {
+            // eventOptionCnt
+            eventOptionCnt = input.readUInt32();
+            bitField0_ |= 0x00000004;
+            tag = input.readTag();
             if (tag != 40) {
               break;
             }
@@ -11424,7 +11488,7 @@ public final class PublicStarTower {
           case 40: {
             // done
             done = input.readBool();
-            bitField0_ |= 0x00000004;
+            bitField0_ |= 0x00000008;
             tag = input.readTag();
             if (tag != 16378) {
               break;
@@ -11433,7 +11497,7 @@ public final class PublicStarTower {
           case 16378: {
             // nextPackage
             input.readBytes(nextPackage);
-            bitField0_ |= 0x00000008;
+            bitField0_ |= 0x00000010;
             tag = input.readTag();
             if (tag != 18) {
               break;
@@ -11442,7 +11506,7 @@ public final class PublicStarTower {
           case 18: {
             // options [packed=true]
             input.readPackedUInt32(options, tag);
-            bitField0_ |= 0x00000010;
+            bitField0_ |= 0x00000020;
             tag = input.readTag();
             if (tag != 26) {
               break;
@@ -11451,7 +11515,7 @@ public final class PublicStarTower {
           case 26: {
             // failedIdxes [packed=true]
             input.readPackedUInt32(failedIdxes, tag);
-            bitField0_ |= 0x00000020;
+            bitField0_ |= 0x00000040;
             tag = input.readTag();
             if (tag != 50) {
               break;
@@ -11460,7 +11524,7 @@ public final class PublicStarTower {
           case 50: {
             // infos
             tag = input.readRepeatedMessage(infos, tag);
-            bitField0_ |= 0x00000040;
+            bitField0_ |= 0x00000080;
             if (tag != 0) {
               break;
             }
@@ -11478,13 +11542,13 @@ public final class PublicStarTower {
           case 16: {
             // options [packed=false]
             tag = input.readRepeatedUInt32(options, tag);
-            bitField0_ |= 0x00000010;
+            bitField0_ |= 0x00000020;
             break;
           }
           case 24: {
             // failedIdxes [packed=false]
             tag = input.readRepeatedUInt32(failedIdxes, tag);
-            bitField0_ |= 0x00000020;
+            bitField0_ |= 0x00000040;
             break;
           }
         }
@@ -11501,18 +11565,21 @@ public final class PublicStarTower {
         output.writeUInt32(FieldNames.nPCId, nPCId);
       }
       if ((bitField0_ & 0x00000004) != 0) {
-        output.writeBool(FieldNames.done, done);
+        output.writeUInt32(FieldNames.eventOptionCnt, eventOptionCnt);
       }
       if ((bitField0_ & 0x00000008) != 0) {
-        output.writeBytes(FieldNames.nextPackage, nextPackage);
+        output.writeBool(FieldNames.done, done);
       }
       if ((bitField0_ & 0x00000010) != 0) {
-        output.writeRepeatedUInt32(FieldNames.options, options);
+        output.writeBytes(FieldNames.nextPackage, nextPackage);
       }
       if ((bitField0_ & 0x00000020) != 0) {
-        output.writeRepeatedUInt32(FieldNames.failedIdxes, failedIdxes);
+        output.writeRepeatedUInt32(FieldNames.options, options);
       }
       if ((bitField0_ & 0x00000040) != 0) {
+        output.writeRepeatedUInt32(FieldNames.failedIdxes, failedIdxes);
+      }
+      if ((bitField0_ & 0x00000080) != 0) {
         output.writeRepeatedMessage(FieldNames.infos, infos);
       }
       output.endObject();
@@ -11547,11 +11614,22 @@ public final class PublicStarTower {
             }
             break;
           }
+          case 1799321434: {
+            if (input.isAtField(FieldNames.eventOptionCnt)) {
+              if (!input.trySkipNullValue()) {
+                eventOptionCnt = input.readUInt32();
+                bitField0_ |= 0x00000004;
+              }
+            } else {
+              input.skipUnknownField();
+            }
+            break;
+          }
           case 2135970: {
             if (input.isAtField(FieldNames.done)) {
               if (!input.trySkipNullValue()) {
                 done = input.readBool();
-                bitField0_ |= 0x00000004;
+                bitField0_ |= 0x00000008;
               }
             } else {
               input.skipUnknownField();
@@ -11562,7 +11640,7 @@ public final class PublicStarTower {
             if (input.isAtField(FieldNames.nextPackage)) {
               if (!input.trySkipNullValue()) {
                 input.readBytes(nextPackage);
-                bitField0_ |= 0x00000008;
+                bitField0_ |= 0x00000010;
               }
             } else {
               input.skipUnknownField();
@@ -11573,7 +11651,7 @@ public final class PublicStarTower {
             if (input.isAtField(FieldNames.options)) {
               if (!input.trySkipNullValue()) {
                 input.readRepeatedUInt32(options);
-                bitField0_ |= 0x00000010;
+                bitField0_ |= 0x00000020;
               }
             } else {
               input.skipUnknownField();
@@ -11584,7 +11662,7 @@ public final class PublicStarTower {
             if (input.isAtField(FieldNames.failedIdxes)) {
               if (!input.trySkipNullValue()) {
                 input.readRepeatedUInt32(failedIdxes);
-                bitField0_ |= 0x00000020;
+                bitField0_ |= 0x00000040;
               }
             } else {
               input.skipUnknownField();
@@ -11595,7 +11673,7 @@ public final class PublicStarTower {
             if (input.isAtField(FieldNames.infos)) {
               if (!input.trySkipNullValue()) {
                 input.readRepeatedMessage(infos);
-                bitField0_ |= 0x00000040;
+                bitField0_ |= 0x00000080;
               }
             } else {
               input.skipUnknownField();
@@ -11658,6 +11736,8 @@ public final class PublicStarTower {
       static final FieldName evtId = FieldName.forField("EvtId");
 
       static final FieldName nPCId = FieldName.forField("NPCId");
+
+      static final FieldName eventOptionCnt = FieldName.forField("EventOptionCnt");
 
       static final FieldName done = FieldName.forField("Done");
 
@@ -28962,6 +29042,11 @@ public final class PublicStarTower {
     private boolean preference;
 
     /**
+     * <code>optional bool Discard = 9;</code>
+     */
+    private boolean discard;
+
+    /**
      * <code>optional bytes NextPackage = 2047;</code>
      */
     private final RepeatedByte nextPackage = RepeatedByte.newEmptyInstance();
@@ -29177,11 +29262,48 @@ public final class PublicStarTower {
     }
 
     /**
+     * <code>optional bool Discard = 9;</code>
+     * @return whether the discard field is set
+     */
+    public boolean hasDiscard() {
+      return (bitField0_ & 0x00000020) != 0;
+    }
+
+    /**
+     * <code>optional bool Discard = 9;</code>
+     * @return this
+     */
+    public StarTowerBuildBrief clearDiscard() {
+      bitField0_ &= ~0x00000020;
+      discard = false;
+      return this;
+    }
+
+    /**
+     * <code>optional bool Discard = 9;</code>
+     * @return the discard
+     */
+    public boolean getDiscard() {
+      return discard;
+    }
+
+    /**
+     * <code>optional bool Discard = 9;</code>
+     * @param value the discard to set
+     * @return this
+     */
+    public StarTowerBuildBrief setDiscard(final boolean value) {
+      bitField0_ |= 0x00000020;
+      discard = value;
+      return this;
+    }
+
+    /**
      * <code>optional bytes NextPackage = 2047;</code>
      * @return whether the nextPackage field is set
      */
     public boolean hasNextPackage() {
-      return (bitField0_ & 0x00000020) != 0;
+      return (bitField0_ & 0x00000040) != 0;
     }
 
     /**
@@ -29189,7 +29311,7 @@ public final class PublicStarTower {
      * @return this
      */
     public StarTowerBuildBrief clearNextPackage() {
-      bitField0_ &= ~0x00000020;
+      bitField0_ &= ~0x00000040;
       nextPackage.clear();
       return this;
     }
@@ -29218,7 +29340,7 @@ public final class PublicStarTower {
      * @return internal storage object for modifications
      */
     public RepeatedByte getMutableNextPackage() {
-      bitField0_ |= 0x00000020;
+      bitField0_ |= 0x00000040;
       return nextPackage;
     }
 
@@ -29228,7 +29350,7 @@ public final class PublicStarTower {
      * @return this
      */
     public StarTowerBuildBrief addNextPackage(final byte value) {
-      bitField0_ |= 0x00000020;
+      bitField0_ |= 0x00000040;
       nextPackage.add(value);
       return this;
     }
@@ -29239,7 +29361,7 @@ public final class PublicStarTower {
      * @return this
      */
     public StarTowerBuildBrief addAllNextPackage(final byte... values) {
-      bitField0_ |= 0x00000020;
+      bitField0_ |= 0x00000040;
       nextPackage.addAll(values);
       return this;
     }
@@ -29250,7 +29372,7 @@ public final class PublicStarTower {
      * @return this
      */
     public StarTowerBuildBrief setNextPackage(final byte... values) {
-      bitField0_ |= 0x00000020;
+      bitField0_ |= 0x00000040;
       nextPackage.copyFrom(values);
       return this;
     }
@@ -29260,7 +29382,7 @@ public final class PublicStarTower {
      * @return whether the name field is set
      */
     public boolean hasName() {
-      return (bitField0_ & 0x00000040) != 0;
+      return (bitField0_ & 0x00000080) != 0;
     }
 
     /**
@@ -29268,7 +29390,7 @@ public final class PublicStarTower {
      * @return this
      */
     public StarTowerBuildBrief clearName() {
-      bitField0_ &= ~0x00000040;
+      bitField0_ &= ~0x00000080;
       name.clear();
       return this;
     }
@@ -29294,7 +29416,7 @@ public final class PublicStarTower {
      * @return internal {@code Utf8String} representation of name for modifications
      */
     public Utf8String getMutableNameBytes() {
-      bitField0_ |= 0x00000040;
+      bitField0_ |= 0x00000080;
       return this.name;
     }
 
@@ -29304,7 +29426,7 @@ public final class PublicStarTower {
      * @return this
      */
     public StarTowerBuildBrief setName(final CharSequence value) {
-      bitField0_ |= 0x00000040;
+      bitField0_ |= 0x00000080;
       name.copyFrom(value);
       return this;
     }
@@ -29315,7 +29437,7 @@ public final class PublicStarTower {
      * @return this
      */
     public StarTowerBuildBrief setName(final Utf8String value) {
-      bitField0_ |= 0x00000040;
+      bitField0_ |= 0x00000080;
       name.copyFrom(value);
       return this;
     }
@@ -29325,7 +29447,7 @@ public final class PublicStarTower {
      * @return whether the discIds field is set
      */
     public boolean hasDiscIds() {
-      return (bitField0_ & 0x00000080) != 0;
+      return (bitField0_ & 0x00000100) != 0;
     }
 
     /**
@@ -29333,7 +29455,7 @@ public final class PublicStarTower {
      * @return this
      */
     public StarTowerBuildBrief clearDiscIds() {
-      bitField0_ &= ~0x00000080;
+      bitField0_ &= ~0x00000100;
       discIds.clear();
       return this;
     }
@@ -29362,7 +29484,7 @@ public final class PublicStarTower {
      * @return internal storage object for modifications
      */
     public RepeatedInt getMutableDiscIds() {
-      bitField0_ |= 0x00000080;
+      bitField0_ |= 0x00000100;
       return discIds;
     }
 
@@ -29372,7 +29494,7 @@ public final class PublicStarTower {
      * @return this
      */
     public StarTowerBuildBrief addDiscIds(final int value) {
-      bitField0_ |= 0x00000080;
+      bitField0_ |= 0x00000100;
       discIds.add(value);
       return this;
     }
@@ -29383,7 +29505,7 @@ public final class PublicStarTower {
      * @return this
      */
     public StarTowerBuildBrief addAllDiscIds(final int... values) {
-      bitField0_ |= 0x00000080;
+      bitField0_ |= 0x00000100;
       discIds.addAll(values);
       return this;
     }
@@ -29393,7 +29515,7 @@ public final class PublicStarTower {
      * @return whether the chars field is set
      */
     public boolean hasChars() {
-      return (bitField0_ & 0x00000100) != 0;
+      return (bitField0_ & 0x00000200) != 0;
     }
 
     /**
@@ -29401,7 +29523,7 @@ public final class PublicStarTower {
      * @return this
      */
     public StarTowerBuildBrief clearChars() {
-      bitField0_ &= ~0x00000100;
+      bitField0_ &= ~0x00000200;
       chars.clear();
       return this;
     }
@@ -29430,7 +29552,7 @@ public final class PublicStarTower {
      * @return internal storage object for modifications
      */
     public RepeatedMessage<TowerBuildChar> getMutableChars() {
-      bitField0_ |= 0x00000100;
+      bitField0_ |= 0x00000200;
       return chars;
     }
 
@@ -29440,7 +29562,7 @@ public final class PublicStarTower {
      * @return this
      */
     public StarTowerBuildBrief addChars(final TowerBuildChar value) {
-      bitField0_ |= 0x00000100;
+      bitField0_ |= 0x00000200;
       chars.add(value);
       return this;
     }
@@ -29451,7 +29573,7 @@ public final class PublicStarTower {
      * @return this
      */
     public StarTowerBuildBrief addAllChars(final TowerBuildChar... values) {
-      bitField0_ |= 0x00000100;
+      bitField0_ |= 0x00000200;
       chars.addAll(values);
       return this;
     }
@@ -29466,6 +29588,7 @@ public final class PublicStarTower {
         starTowerId = other.starTowerId;
         lock = other.lock;
         preference = other.preference;
+        discard = other.discard;
         nextPackage.copyFrom(other.nextPackage);
         name.copyFrom(other.name);
         discIds.copyFrom(other.discIds);
@@ -29495,6 +29618,9 @@ public final class PublicStarTower {
       if (other.hasPreference()) {
         setPreference(other.preference);
       }
+      if (other.hasDiscard()) {
+        setDiscard(other.discard);
+      }
       if (other.hasNextPackage()) {
         getMutableNextPackage().copyFrom(other.nextPackage);
       }
@@ -29522,6 +29648,7 @@ public final class PublicStarTower {
       starTowerId = 0;
       lock = false;
       preference = false;
+      discard = false;
       nextPackage.clear();
       name.clear();
       discIds.clear();
@@ -29558,6 +29685,7 @@ public final class PublicStarTower {
         && (!hasStarTowerId() || starTowerId == other.starTowerId)
         && (!hasLock() || lock == other.lock)
         && (!hasPreference() || preference == other.preference)
+        && (!hasDiscard() || discard == other.discard)
         && (!hasNextPackage() || nextPackage.equals(other.nextPackage))
         && (!hasName() || name.equals(other.name))
         && (!hasDiscIds() || discIds.equals(other.discIds))
@@ -29587,20 +29715,24 @@ public final class PublicStarTower {
         output.writeBoolNoTag(preference);
       }
       if ((bitField0_ & 0x00000020) != 0) {
+        output.writeRawByte((byte) 72);
+        output.writeBoolNoTag(discard);
+      }
+      if ((bitField0_ & 0x00000040) != 0) {
         output.writeRawLittleEndian16((short) 32762);
         output.writeBytesNoTag(nextPackage);
       }
-      if ((bitField0_ & 0x00000040) != 0) {
+      if ((bitField0_ & 0x00000080) != 0) {
         output.writeRawByte((byte) 18);
         output.writeStringNoTag(name);
       }
-      if ((bitField0_ & 0x00000080) != 0) {
+      if ((bitField0_ & 0x00000100) != 0) {
         for (int i = 0; i < discIds.length(); i++) {
           output.writeRawByte((byte) 48);
           output.writeUInt32NoTag(discIds.array()[i]);
         }
       }
-      if ((bitField0_ & 0x00000100) != 0) {
+      if ((bitField0_ & 0x00000200) != 0) {
         for (int i = 0; i < chars.length(); i++) {
           output.writeRawByte((byte) 58);
           output.writeMessageNoTag(chars.get(i));
@@ -29627,15 +29759,18 @@ public final class PublicStarTower {
         size += 2;
       }
       if ((bitField0_ & 0x00000020) != 0) {
-        size += 2 + ProtoSink.computeBytesSizeNoTag(nextPackage);
+        size += 2;
       }
       if ((bitField0_ & 0x00000040) != 0) {
-        size += 1 + ProtoSink.computeStringSizeNoTag(name);
+        size += 2 + ProtoSink.computeBytesSizeNoTag(nextPackage);
       }
       if ((bitField0_ & 0x00000080) != 0) {
-        size += (1 * discIds.length()) + ProtoSink.computeRepeatedUInt32SizeNoTag(discIds);
+        size += 1 + ProtoSink.computeStringSizeNoTag(name);
       }
       if ((bitField0_ & 0x00000100) != 0) {
+        size += (1 * discIds.length()) + ProtoSink.computeRepeatedUInt32SizeNoTag(discIds);
+      }
+      if ((bitField0_ & 0x00000200) != 0) {
         size += (1 * chars.length()) + ProtoSink.computeRepeatedMessageSizeNoTag(chars);
       }
       return size;
@@ -29689,6 +29824,15 @@ public final class PublicStarTower {
             preference = input.readBool();
             bitField0_ |= 0x00000010;
             tag = input.readTag();
+            if (tag != 72) {
+              break;
+            }
+          }
+          case 72: {
+            // discard
+            discard = input.readBool();
+            bitField0_ |= 0x00000020;
+            tag = input.readTag();
             if (tag != 16378) {
               break;
             }
@@ -29696,7 +29840,7 @@ public final class PublicStarTower {
           case 16378: {
             // nextPackage
             input.readBytes(nextPackage);
-            bitField0_ |= 0x00000020;
+            bitField0_ |= 0x00000040;
             tag = input.readTag();
             if (tag != 18) {
               break;
@@ -29705,7 +29849,7 @@ public final class PublicStarTower {
           case 18: {
             // name
             input.readString(name);
-            bitField0_ |= 0x00000040;
+            bitField0_ |= 0x00000080;
             tag = input.readTag();
             if (tag != 50) {
               break;
@@ -29714,7 +29858,7 @@ public final class PublicStarTower {
           case 50: {
             // discIds [packed=true]
             input.readPackedUInt32(discIds, tag);
-            bitField0_ |= 0x00000080;
+            bitField0_ |= 0x00000100;
             tag = input.readTag();
             if (tag != 58) {
               break;
@@ -29723,7 +29867,7 @@ public final class PublicStarTower {
           case 58: {
             // chars
             tag = input.readRepeatedMessage(chars, tag);
-            bitField0_ |= 0x00000100;
+            bitField0_ |= 0x00000200;
             if (tag != 0) {
               break;
             }
@@ -29741,7 +29885,7 @@ public final class PublicStarTower {
           case 48: {
             // discIds [packed=false]
             tag = input.readRepeatedUInt32(discIds, tag);
-            bitField0_ |= 0x00000080;
+            bitField0_ |= 0x00000100;
             break;
           }
         }
@@ -29767,15 +29911,18 @@ public final class PublicStarTower {
         output.writeBool(FieldNames.preference, preference);
       }
       if ((bitField0_ & 0x00000020) != 0) {
-        output.writeBytes(FieldNames.nextPackage, nextPackage);
+        output.writeBool(FieldNames.discard, discard);
       }
       if ((bitField0_ & 0x00000040) != 0) {
-        output.writeString(FieldNames.name, name);
+        output.writeBytes(FieldNames.nextPackage, nextPackage);
       }
       if ((bitField0_ & 0x00000080) != 0) {
-        output.writeRepeatedUInt32(FieldNames.discIds, discIds);
+        output.writeString(FieldNames.name, name);
       }
       if ((bitField0_ & 0x00000100) != 0) {
+        output.writeRepeatedUInt32(FieldNames.discIds, discIds);
+      }
+      if ((bitField0_ & 0x00000200) != 0) {
         output.writeRepeatedMessage(FieldNames.chars, chars);
       }
       output.endObject();
@@ -29843,11 +29990,22 @@ public final class PublicStarTower {
             }
             break;
           }
+          case -958947202: {
+            if (input.isAtField(FieldNames.discard)) {
+              if (!input.trySkipNullValue()) {
+                discard = input.readBool();
+                bitField0_ |= 0x00000020;
+              }
+            } else {
+              input.skipUnknownField();
+            }
+            break;
+          }
           case -2082324045: {
             if (input.isAtField(FieldNames.nextPackage)) {
               if (!input.trySkipNullValue()) {
                 input.readBytes(nextPackage);
-                bitField0_ |= 0x00000020;
+                bitField0_ |= 0x00000040;
               }
             } else {
               input.skipUnknownField();
@@ -29858,7 +30016,7 @@ public final class PublicStarTower {
             if (input.isAtField(FieldNames.name)) {
               if (!input.trySkipNullValue()) {
                 input.readString(name);
-                bitField0_ |= 0x00000040;
+                bitField0_ |= 0x00000080;
               }
             } else {
               input.skipUnknownField();
@@ -29869,7 +30027,7 @@ public final class PublicStarTower {
             if (input.isAtField(FieldNames.discIds)) {
               if (!input.trySkipNullValue()) {
                 input.readRepeatedUInt32(discIds);
-                bitField0_ |= 0x00000080;
+                bitField0_ |= 0x00000100;
               }
             } else {
               input.skipUnknownField();
@@ -29880,7 +30038,7 @@ public final class PublicStarTower {
             if (input.isAtField(FieldNames.chars)) {
               if (!input.trySkipNullValue()) {
                 input.readRepeatedMessage(chars);
-                bitField0_ |= 0x00000100;
+                bitField0_ |= 0x00000200;
               }
             } else {
               input.skipUnknownField();
@@ -29949,6 +30107,8 @@ public final class PublicStarTower {
       static final FieldName lock = FieldName.forField("Lock");
 
       static final FieldName preference = FieldName.forField("Preference");
+
+      static final FieldName discard = FieldName.forField("Discard");
 
       static final FieldName nextPackage = FieldName.forField("NextPackage");
 

@@ -55,6 +55,16 @@ public final class ActivityIceCreamLevelSettle {
     private int propCount;
 
     /**
+     * <code>optional uint32 MaxCombo = 8;</code>
+     */
+    private int maxCombo;
+
+    /**
+     * <code>optional uint32 PassionTimes = 9;</code>
+     */
+    private int passionTimes;
+
+    /**
      * <code>optional bytes NextPackage = 2047;</code>
      */
     private final RepeatedByte nextPackage = RepeatedByte.newEmptyInstance();
@@ -329,11 +339,85 @@ public final class ActivityIceCreamLevelSettle {
     }
 
     /**
+     * <code>optional uint32 MaxCombo = 8;</code>
+     * @return whether the maxCombo field is set
+     */
+    public boolean hasMaxCombo() {
+      return (bitField0_ & 0x00000080) != 0;
+    }
+
+    /**
+     * <code>optional uint32 MaxCombo = 8;</code>
+     * @return this
+     */
+    public ActivityIceCreamLevelSettleReq clearMaxCombo() {
+      bitField0_ &= ~0x00000080;
+      maxCombo = 0;
+      return this;
+    }
+
+    /**
+     * <code>optional uint32 MaxCombo = 8;</code>
+     * @return the maxCombo
+     */
+    public int getMaxCombo() {
+      return maxCombo;
+    }
+
+    /**
+     * <code>optional uint32 MaxCombo = 8;</code>
+     * @param value the maxCombo to set
+     * @return this
+     */
+    public ActivityIceCreamLevelSettleReq setMaxCombo(final int value) {
+      bitField0_ |= 0x00000080;
+      maxCombo = value;
+      return this;
+    }
+
+    /**
+     * <code>optional uint32 PassionTimes = 9;</code>
+     * @return whether the passionTimes field is set
+     */
+    public boolean hasPassionTimes() {
+      return (bitField0_ & 0x00000100) != 0;
+    }
+
+    /**
+     * <code>optional uint32 PassionTimes = 9;</code>
+     * @return this
+     */
+    public ActivityIceCreamLevelSettleReq clearPassionTimes() {
+      bitField0_ &= ~0x00000100;
+      passionTimes = 0;
+      return this;
+    }
+
+    /**
+     * <code>optional uint32 PassionTimes = 9;</code>
+     * @return the passionTimes
+     */
+    public int getPassionTimes() {
+      return passionTimes;
+    }
+
+    /**
+     * <code>optional uint32 PassionTimes = 9;</code>
+     * @param value the passionTimes to set
+     * @return this
+     */
+    public ActivityIceCreamLevelSettleReq setPassionTimes(final int value) {
+      bitField0_ |= 0x00000100;
+      passionTimes = value;
+      return this;
+    }
+
+    /**
      * <code>optional bytes NextPackage = 2047;</code>
      * @return whether the nextPackage field is set
      */
     public boolean hasNextPackage() {
-      return (bitField0_ & 0x00000080) != 0;
+      return (bitField0_ & 0x00000200) != 0;
     }
 
     /**
@@ -341,7 +425,7 @@ public final class ActivityIceCreamLevelSettle {
      * @return this
      */
     public ActivityIceCreamLevelSettleReq clearNextPackage() {
-      bitField0_ &= ~0x00000080;
+      bitField0_ &= ~0x00000200;
       nextPackage.clear();
       return this;
     }
@@ -370,7 +454,7 @@ public final class ActivityIceCreamLevelSettle {
      * @return internal storage object for modifications
      */
     public RepeatedByte getMutableNextPackage() {
-      bitField0_ |= 0x00000080;
+      bitField0_ |= 0x00000200;
       return nextPackage;
     }
 
@@ -380,7 +464,7 @@ public final class ActivityIceCreamLevelSettle {
      * @return this
      */
     public ActivityIceCreamLevelSettleReq addNextPackage(final byte value) {
-      bitField0_ |= 0x00000080;
+      bitField0_ |= 0x00000200;
       nextPackage.add(value);
       return this;
     }
@@ -391,7 +475,7 @@ public final class ActivityIceCreamLevelSettle {
      * @return this
      */
     public ActivityIceCreamLevelSettleReq addAllNextPackage(final byte... values) {
-      bitField0_ |= 0x00000080;
+      bitField0_ |= 0x00000200;
       nextPackage.addAll(values);
       return this;
     }
@@ -402,7 +486,7 @@ public final class ActivityIceCreamLevelSettle {
      * @return this
      */
     public ActivityIceCreamLevelSettleReq setNextPackage(final byte... values) {
-      bitField0_ |= 0x00000080;
+      bitField0_ |= 0x00000200;
       nextPackage.copyFrom(values);
       return this;
     }
@@ -419,6 +503,8 @@ public final class ActivityIceCreamLevelSettle {
         totalScore = other.totalScore;
         streakCount = other.streakCount;
         propCount = other.propCount;
+        maxCombo = other.maxCombo;
+        passionTimes = other.passionTimes;
         nextPackage.copyFrom(other.nextPackage);
       }
       return this;
@@ -451,6 +537,12 @@ public final class ActivityIceCreamLevelSettle {
       if (other.hasPropCount()) {
         setPropCount(other.propCount);
       }
+      if (other.hasMaxCombo()) {
+        setMaxCombo(other.maxCombo);
+      }
+      if (other.hasPassionTimes()) {
+        setPassionTimes(other.passionTimes);
+      }
       if (other.hasNextPackage()) {
         getMutableNextPackage().copyFrom(other.nextPackage);
       }
@@ -471,6 +563,8 @@ public final class ActivityIceCreamLevelSettle {
       totalScore = 0;
       streakCount = 0;
       propCount = 0;
+      maxCombo = 0;
+      passionTimes = 0;
       nextPackage.clear();
       return this;
     }
@@ -503,6 +597,8 @@ public final class ActivityIceCreamLevelSettle {
         && (!hasTotalScore() || totalScore == other.totalScore)
         && (!hasStreakCount() || streakCount == other.streakCount)
         && (!hasPropCount() || propCount == other.propCount)
+        && (!hasMaxCombo() || maxCombo == other.maxCombo)
+        && (!hasPassionTimes() || passionTimes == other.passionTimes)
         && (!hasNextPackage() || nextPackage.equals(other.nextPackage));
     }
 
@@ -537,6 +633,14 @@ public final class ActivityIceCreamLevelSettle {
         output.writeUInt32NoTag(propCount);
       }
       if ((bitField0_ & 0x00000080) != 0) {
+        output.writeRawByte((byte) 64);
+        output.writeUInt32NoTag(maxCombo);
+      }
+      if ((bitField0_ & 0x00000100) != 0) {
+        output.writeRawByte((byte) 72);
+        output.writeUInt32NoTag(passionTimes);
+      }
+      if ((bitField0_ & 0x00000200) != 0) {
         output.writeRawLittleEndian16((short) 32762);
         output.writeBytesNoTag(nextPackage);
       }
@@ -567,6 +671,12 @@ public final class ActivityIceCreamLevelSettle {
         size += 1 + ProtoSink.computeUInt32SizeNoTag(propCount);
       }
       if ((bitField0_ & 0x00000080) != 0) {
+        size += 1 + ProtoSink.computeUInt32SizeNoTag(maxCombo);
+      }
+      if ((bitField0_ & 0x00000100) != 0) {
+        size += 1 + ProtoSink.computeUInt32SizeNoTag(passionTimes);
+      }
+      if ((bitField0_ & 0x00000200) != 0) {
         size += 2 + ProtoSink.computeBytesSizeNoTag(nextPackage);
       }
       return size;
@@ -638,6 +748,24 @@ public final class ActivityIceCreamLevelSettle {
             propCount = input.readUInt32();
             bitField0_ |= 0x00000040;
             tag = input.readTag();
+            if (tag != 64) {
+              break;
+            }
+          }
+          case 64: {
+            // maxCombo
+            maxCombo = input.readUInt32();
+            bitField0_ |= 0x00000080;
+            tag = input.readTag();
+            if (tag != 72) {
+              break;
+            }
+          }
+          case 72: {
+            // passionTimes
+            passionTimes = input.readUInt32();
+            bitField0_ |= 0x00000100;
+            tag = input.readTag();
             if (tag != 16378) {
               break;
             }
@@ -645,7 +773,7 @@ public final class ActivityIceCreamLevelSettle {
           case 16378: {
             // nextPackage
             input.readBytes(nextPackage);
-            bitField0_ |= 0x00000080;
+            bitField0_ |= 0x00000200;
             tag = input.readTag();
             if (tag != 0) {
               break;
@@ -690,6 +818,12 @@ public final class ActivityIceCreamLevelSettle {
         output.writeUInt32(FieldNames.propCount, propCount);
       }
       if ((bitField0_ & 0x00000080) != 0) {
+        output.writeUInt32(FieldNames.maxCombo, maxCombo);
+      }
+      if ((bitField0_ & 0x00000100) != 0) {
+        output.writeUInt32(FieldNames.passionTimes, passionTimes);
+      }
+      if ((bitField0_ & 0x00000200) != 0) {
         output.writeBytes(FieldNames.nextPackage, nextPackage);
       }
       output.endObject();
@@ -779,11 +913,33 @@ public final class ActivityIceCreamLevelSettle {
             }
             break;
           }
+          case 446742186: {
+            if (input.isAtField(FieldNames.maxCombo)) {
+              if (!input.trySkipNullValue()) {
+                maxCombo = input.readUInt32();
+                bitField0_ |= 0x00000080;
+              }
+            } else {
+              input.skipUnknownField();
+            }
+            break;
+          }
+          case 1973181263: {
+            if (input.isAtField(FieldNames.passionTimes)) {
+              if (!input.trySkipNullValue()) {
+                passionTimes = input.readUInt32();
+                bitField0_ |= 0x00000100;
+              }
+            } else {
+              input.skipUnknownField();
+            }
+            break;
+          }
           case -2082324045: {
             if (input.isAtField(FieldNames.nextPackage)) {
               if (!input.trySkipNullValue()) {
                 input.readBytes(nextPackage);
-                bitField0_ |= 0x00000080;
+                bitField0_ |= 0x00000200;
               }
             } else {
               input.skipUnknownField();
@@ -858,6 +1014,10 @@ public final class ActivityIceCreamLevelSettle {
       static final FieldName streakCount = FieldName.forField("StreakCount");
 
       static final FieldName propCount = FieldName.forField("PropCount");
+
+      static final FieldName maxCombo = FieldName.forField("MaxCombo");
+
+      static final FieldName passionTimes = FieldName.forField("PassionTimes");
 
       static final FieldName nextPackage = FieldName.forField("NextPackage");
     }

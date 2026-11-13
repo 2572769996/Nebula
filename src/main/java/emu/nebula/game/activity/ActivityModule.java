@@ -91,9 +91,15 @@ public class ActivityModule extends GameContextModule {
         //this.activities.add(1011204);
         
         // Wholeness at Reunion's Dawn
-        this.activities.add(2010401);
-        this.activities.add(2010403);
-        this.activities.add(2010404);
+        //this.activities.add(2010401);
+        //this.activities.add(2010403);
+        //this.activities.add(2010404);
+        
+        // The Brushstrokes of the Unknown
+        this.activities.add(1011301);
+        this.activities.add(1011302);
+        this.activities.add(1011303);
+        this.activities.add(1011304);
         
         // ===== Joint Drills (Finale Echoing) =====
         //this.activities.add(510003); // Causes soft lock in event screen
@@ -101,9 +107,9 @@ public class ActivityModule extends GameContextModule {
         // ===== Etc Events =====
         
         // Trial activities
-        this.activities.add(700131);
-        this.activities.add(700132);
         this.activities.add(700133);
+        this.activities.add(700134);
+        this.activities.add(700135);
         
         // Tower defense activity
         //this.activities.add(102002); // Missing image on client - probably removed
@@ -124,10 +130,10 @@ public class ActivityModule extends GameContextModule {
         //this.activities.add(600001);
         
         // 1st anniversary
-        this.activities.add(301051);
-        this.activities.add(301052);
-        this.activities.add(301053);
-        this.activities.add(302001);
+        //this.activities.add(301051);
+        //this.activities.add(301052);
+        //this.activities.add(301053);
+        //this.activities.add(302001);
     }
     
 }

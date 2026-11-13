@@ -110,6 +110,7 @@ public enum QuestCondition {
     SoldierClearTotalWithSeason                                                   (175),
     SoldierSpecificRankWithSeason                                                 (176),
     DormSaveRoom                                                                  (177),
+    HandbookUnlock                                                                (178),
     ClientReport                                                                  (200),
     TowerBattleTimes                                                              (501),
     TowerBossChallengeSpecificHighRewardWithTotal                                 (502),
